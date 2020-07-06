@@ -1,0 +1,12 @@
+#useDynLib(Compositional, .registration = TRUE)
+
+importFrom("bnlearn", hc, score)
+
+importFrom("Rfast", cora, pc.skel, gchi2Test)
+
+importFrom("stats", qf, pt, pchisq, cor, qt)
+
+exportPattern("^[[:alpha:]]+")
+exportPattern("^[^\\.]")
+
+

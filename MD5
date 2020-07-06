@@ -1,0 +1,13 @@
+633ef7040632008a0328213aa0b0993f *DESCRIPTION
+041ab855308413b145f2917a89986dc6 *NAMESPACE
+c2eca93409b8762b11d1a2261058ac14 *R/cat.tests.R
+7ef92224b5a4bd542b9c54c506f3f090 *R/cortest.R
+f89f026110773098a82adc4367d7f461 *R/pchc.R
+fba292fbf30d3e2abf25b485b084e82d *R/pchc.skel.R
+a227795c7a4823b00a066f875be3ebfd *R/pcor.R
+af142300ff9109349d8725474eac2b90 *man/cat.tests.Rd
+abe19ade7bc45c3c0c9bbac66b0f322d *man/cortest.Rd
+0431591ad4340869c7ef74bc0b2aaf40 *man/pchc-package.Rd
+baf685d4c794aba08cd49abe1ca39c88 *man/pchc.Rd
+86e407222a94ed8a026565b403248a10 *man/pchc.skel.Rd
+43c2fc2fe913fc3c4f28e993a1f35891 *man/pcor.Rd
