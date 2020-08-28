@@ -35,7 +35,7 @@ Given a correlation matrix the function will caclulate the partial correlation b
 }
 
 \value{
-The logged p-value for the test of no partial correlation.
+A numeric vector containing the partial correlation and logged p-value for the test of no partial correlation.
 }
 
 %\references{
@@ -53,7 +53,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}
 %}
 
 \seealso{
-\code{ \link{pc.skel}
+\code{ \link{cortest}, \link{pc.skel}
 }
 }
 
@@ -68,5 +68,3 @@ r <- cor(iris[, 1:3])
 pcor(r, 1,2, 3, 150)
 }
 
-\keyword{ Partial correlation }
-\keyword{ Conditioning set }

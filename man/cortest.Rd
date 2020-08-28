@@ -28,18 +28,18 @@ The significance level used for the confidence intervals.
 }
 
 \details{
-The function uses the built-in function "cor" which is very fast, then computes a confidence interval 
-and produces a p-value for the hypothesis test. 
+The function uses the built-in function "cor" which is very fast, then computes a confidence interval
+and produces a p-value for the hypothesis test.
 }
 
 \value{
-A vector with 5 numbers; the correlation, the p-value for the hypothesis test that each of them is 
+A vector with 5 numbers; the correlation, the p-value for the hypothesis test that each of them is
 equal to "rho", the test statistic and the $a/2\%$ lower and upper confidence limits.
 
 }
 
 %\references{
-%Tsagris M.T., Preston S. and Wood A.T.A. (2011). A data-based power transformation for compositional data. 
+%Tsagris M.T., Preston S. and Wood A.T.A. (2011). A data-based power transformation for compositional data.
 %In Proceedings of the 4th Compositional Data Analysis Workshop, Girona, Spain.
 %}
 
@@ -58,7 +58,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 \examples{
 x <- rcauchy(60)
 y <- rnorm(60)
-cortest(y, x)  
+cortest(y, x)
 }
 
 

@@ -35,25 +35,14 @@ if the initial p-values of the univariate associations are available, pass them 
 \details{
 The PC algorithm as proposed by Spirtes et al. (2000) is implemented. The variables must be either continuous or
 categorical, only. The skeleton of the PC algorithm is order independent, since we are using the third heuristic
-(Spirte et al., 2000, pg. 90). At every stage of the algorithm use the pairs which are least statistically associated.
-The conditioning set consists of variables which are most statistically associated with each other of the pair of
-variables.
+(Spirte et al., 2000, pg. 90). At every stage of the algorithm use the pairs which are least statistically associated. The conditioning set consists of variables which are most statistically associated with each other of the pair of variables.
 
-For example, for the pair (X, Y) there can be two conditioning sets for example (Z1, Z2) and (W1, W2). All p-values
-and test statistics and degrees of freedom have been computed at the first step of the algorithm. Take the p-values
-between (Z1, Z2) and (X, Y) and between (Z1, Z2) and (X, Y). The conditioning set with the minimum p-value is used
-first. If the minimum p-values are the same, use the second lowest p-value. If the unlikely, but not impossible,
-event of all p-values being the same, the test statistic divided by the degrees of freedom is used as a means of
-choosing which conditioning set is to be used first.
+For example, for the pair (X, Y) there can be two conditioning sets for example (Z1, Z2) and (W1, W2). All p-values and test statistics and degrees of freedom have been computed at the first step of the algorithm. Take the p-values between (Z1, Z2) and (X, Y) and between (Z1, Z2) and (X, Y). The conditioning set with the minimum p-value is used first. If the minimum p-values are the same, use the second lowest p-value. If the unlikely, but not impossible, event of all p-values being the same, the test statistic divided by the degrees of freedom is used as a means of choosing which conditioning set is to be used first.
 
-If two or more p-values are below the machine epsilon (.Machine$double.eps which is equal to 2.220446e-16), all of
-them are set to 0. To make the comparison or the ordering feasible we use the logarithm of p-value. Hence,
+If two or more p-values are below the machine epsilon (.Machine$double.eps which is equal to 2.220446e-16), all of them are set to 0. To make the comparison or the ordering feasible we use the logarithm of p-value. Hence,
 the logarithm of the p-values is always calculated and used.
 
-In the case of the \eqn{G^2} test of independence (for categorical data) with no permutations, we have incorporated
-a rule of thumb. If the number of samples is at least 5 times the number of the parameters to be estimated, the test
-is performed, otherwise, independence is not rejected according to Tsamardinos et al. (2006). We have modified it so
-that it calculates the p-value using permutations.
+In the case of the \eqn{G^2} test of independence (for categorical data) with no permutations, we have incorporated a rule of thumb. If the number of samples is at least 5 times the number of the parameters to be estimated, the test is performed, otherwise, independence is not rejected according to Tsamardinos et al. (2006). We have modified it so that it calculates the p-value using permutations.
 }
 
 \value{
@@ -83,6 +72,7 @@ The adjancency matrix. A value of 1 in G[i, j] appears in G[j, i] also, indicati
 A list with the separating sets for every value of k.
 }
 }
+
 \references{
 Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA,
 USA, 3nd edition.

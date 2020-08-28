@@ -1,8 +1,8 @@
-#useDynLib(Compositional, .registration = TRUE)
+#useDynLib(pchc, .registration = TRUE)
 
-importFrom("bnlearn", hc, score)
+importFrom("bnlearn", hc, score, rbn, graphviz.plot)
 
-importFrom("Rfast", cora, pc.skel, gchi2Test)
+importFrom("Rfast", cora, pc.skel, gchi2Test, g2Test, g2Test_perm, chi2Test)
 
 importFrom("stats", qf, pt, pchisq, cor, qt)
 

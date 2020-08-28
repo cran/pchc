@@ -9,5 +9,8 @@ pcor <- function(R, indx, indy, indz, n) {
   }
   if ( abs(r) > 1 ) r <- 0.99999
   z <- 0.5 * log( (1 + r) / (1 - r) ) * sqrt( n - sum(indz > 0) - 3 )
-  log(2) + pt( abs(z), n - sum(indz > 0) - 3, lower.tail = FALSE, log.p = TRUE )
+  pval <- log(2) + pt( abs(z), n - sum(indz > 0) - 3, lower.tail = FALSE, log.p = TRUE )
+  res <- c(r, pval)
+  names(res) <- c( "partial correlation", "logged p-value")
+  res 
 }

@@ -10,7 +10,7 @@ The PCHC Bayesian network learning algorithm.
 
 \usage{
 pchc(x, method = "pearson", alpha = 0.05, ini.stat = NULL,
-ini.pvalue = NULL, restart = 10, score = "bge", blacklist = NULL, whitelist = NULL)
+ini.pvalue = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
 }
 
 \arguments{
@@ -36,7 +36,7 @@ An integer, the number of random restarts.
 \item{score}{
 A character string, the label of the network score to be used in the algorithm. If none is specified,
 the default score is the Bayesian Information Criterion for both discrete and continuous data sets.
-The available score for continuous variables are: "bge" (default), "loglik-g", "aic-g", "bic-g" or "bge".
+The available score for continuous variables are: "bic-g" (default), "loglik-g", "aic-g", "bic-g" or "bge".
 The available score categorical variables are: "bde", "loglik" or "bic".
 }
 \item{blacklist}{
@@ -55,31 +55,24 @@ The PC algorithm as proposed by Spirtes et al. (2000) is first implemented follo
 
 \value{
 A list including:
-\item{stat}{
-The test statistics of the univariate associations.
+\item{a}{
+A list including the output of the \code{ \link{pchc.skel} } funciton.
 }
-\item{ini.pvalue}{
-The initial p-values univariate associations.
+\item{dag}{
+A "bn" class output. A list including the outcome of the Hill-Climbing phase. See the R package "bnlearn" for more details.
 }
-\item{pvalue}{
-The logarithm of the p-values of the univariate associations.
+\item{mhvale}{
+A data frame with two columns (optionally labeled "from" and "to"), containing a set of arcs not to
+be included in the graph.
+}
+\item{scoring}{
+The score value.
 }
 \item{runtime}{
 The amount of time it took to run the algorithm.
 }
-\item{kappa}{
-The maximum value of k, the maximum cardinality of the conditioning set at which the algorithm stopped.
 }
-\item{n.tests}{
-The number of tests conducted during each k.
-}
-\item{G}{
-The adjancency matrix. A value of 1 in G[i, j] appears in G[j, i] also, indicating that i and j have an edge between them.
-}
-\item{sepset}{
-A list with the separating sets for every value of k.
-}
-}
+
 \references{
 Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
 
@@ -105,7 +98,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 
 \examples{
 # simulate a dataset with continuous data
-x <- matrix( rnorm(200 * 50, 1, 10), nrow = 200 )
+x <- matrix( rnorm(500 * 30, 1, 10), nrow = 500 )
 a <- pchc(x)
 }
 

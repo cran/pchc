@@ -51,14 +51,13 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %}
 
 \seealso{
-\code{ \link{cortest}, \link{pc.skel}
+\code{\link{g2test}, \link{cortest}, \link{pc.skel}
 }
 }
 
 \examples{
 x <- rbinom(100, 3, 0.5)
 y <- rbinom(100, 2, 0.5)
+cat.tests(x, y)
 }
-
-\keyword{ G^2 test of conditional independence }
 

@@ -13,8 +13,8 @@ Bayesian network learning with the PCHC algorithm. PCHC stands for PC Hill-Climb
 \tabular{ll}{
 Package: \tab pchc\cr
 Type: \tab Package\cr
-Version: \tab 0.1 \cr
-Date: \tab 2020-07-05\cr
+Version: \tab 0.2 \cr
+Date: \tab 2020-08-27\cr
 License: \tab GPL-2\cr
 }
 }
