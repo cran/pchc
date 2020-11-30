@@ -1,10 +1,21 @@
 #useDynLib(pchc, .registration = TRUE)
 
-importFrom("bnlearn", hc, score, rbn, graphviz.plot)
+importFrom("bnlearn", hc, score, rbn, graphviz.plot, amat)
 
-importFrom("Rfast", cora, pc.skel, gchi2Test, g2Test, g2Test_perm, chi2Test)
+importFrom("Rfast", pc.skel, gchi2Test, g2Test, g2Test_perm, chi2Test)
 
-importFrom("stats", qf, pt, pchisq, cor, qt)
+importFrom("Rfast2", mmpc, pc.sel)
+
+importFrom("stats", qf, pt, pchisq, cor, qt, qbeta, optimise,
+           predict, quantile, rbinom, rnorm, runif, smooth.spline)
+
+importFrom("graphics", abline, plot, points)
+
+importFrom("robustbase", covMcd)
+
+importFrom("bigstatsr", big_cor, big_copy)
+
+importFrom("bigmemory", read.big.matrix)
 
 exportPattern("^[[:alpha:]]+")
 exportPattern("^[^\\.]")

@@ -2,19 +2,19 @@
 \alias{pchc-package}
 \docType{package}
 \title{
-Bayesian Network Learning with the PCHC Algorithm
+Bayesian Network Learning with the PCHC and Related Algorithms
 }
 
 \description{
-Bayesian network learning with the PCHC algorithm. PCHC stands for PC Hill-Climbing. It is a new hybrid algorithm that used PC to construct the skeleton of the BN and then utilizes the Hill-Climbing greedy search. The relevant paper has been submitted and is currently in revision.
+The original version of this package was to learn Bayesian networks with the PCHC algorithm. PCHC stands for PC Hill-Climbing. It is a new hybrid algorithm that used PC to construct the skeleton of the BN and then utilizes the Hill-Climbing greedy search. The relevant paper has been submitted and is currently in revision. The package has been expanded to include the MMHC and the FEDHC algortihms.
 }
 
 \details{
 \tabular{ll}{
 Package: \tab pchc\cr
 Type: \tab Package\cr
-Version: \tab 0.2 \cr
-Date: \tab 2020-08-27\cr
+Version: \tab 0.3 \cr
+Date: \tab 2020-11-30\cr
 License: \tab GPL-2\cr
 }
 }
@@ -28,6 +28,9 @@ Michail Tsagris <mtsagris@uoc.gr>
 }
 
 \references{
+Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
+Computational Economics (Accepted for publication).
+
 Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
 
 Tsamardinos I., Borboudakis G. (2010) Permutation Testing Improves Bayesian Network Learning. In Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2010. 322-337.

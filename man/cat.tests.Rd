@@ -25,7 +25,7 @@ Should the p-values be returned (FALSE) or their logarithm (TRUE)?
 }
 
 \details{
-The function calculates the test statistic of the \eqn{\chi^2} and the \eqn{G^2} tests of unconditional
+The function calculates the test statistic of the \eqn{X^2} and the \eqn{G^2} tests of unconditional
 independence between x and y. x and y need not be numerical vectors like in \code{\link{g2Test}}. This
 function is more close to the spirit of MASS' \code{\link{loglm}} function which calculates both statistics
 using Poisson log-linear models (Tsagris, 2017).
@@ -36,12 +36,15 @@ A matrix with two rows. In each row the X2 or G2 test statistic, its p-value and
 }
 
 \references{
+Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
+Computational Economics (Accepted for publication).
+
 Tsagris M. (2017). Conditional independence test for categorical data using Poisson log-linear model.
-Journal of Data Science, 15(2):347-356.
+Journal of Data Science, 15(2): 347-356.
 }
 
 \author{
-Michail Tsagris
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }

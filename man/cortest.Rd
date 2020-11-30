@@ -38,20 +38,20 @@ equal to "rho", the test statistic and the $a/2\%$ lower and upper confidence li
 
 }
 
-%\references{
-%Tsagris M.T., Preston S. and Wood A.T.A. (2011). A data-based power transformation for compositional data.
-%In Proceedings of the 4th Compositional Data Analysis Workshop, Girona, Spain.
-%}
+\references{
+Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
+Computational Economics (Accepted for publication).
+}
 
 \author{
-Michail Tsagris
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 
 \seealso{
-\code{\link{pcor}
+\code{\link{pcor}, \link{rmcd}
 }
 }
 

@@ -1,29 +1,20 @@
-\name{Plot of a Bayesian network}
-\alias{bnplot}
+\name{Adjacency matrix of a Bayesian network}
+\alias{bnmat}
 
 \title{
-Plot of a Bayesian network
+Adjacency matrix of a Bayesian network
 }
 
-\description{Plot of a Bayesian network.
+\description{Adjacency matrix of a Bayesian network.
 }
 
 \usage{
-bnplot(dag, shape = "ellipse", main = NULL, sub = NULL)
+bnmat(dag)
 }
 
 \arguments{
 \item{dag}{
 A BN object, an object of class "bn".
-}
-\item{shape}{
-A character string defining the shape of the nodes, "ellipse" (default value), "circle" or "rectangle".
-}
-\item{main}{
-The main title of the graph displayed on the top.
-}
-\item{sub}{
-The subtitle of the graph displayed at the bottom.
 }
 }
 
@@ -32,14 +23,14 @@ The function is called from the "bnlearn" package which invokes the "Rgraphviz" 
 }
 
 \value{
-The Bayesian network is visualised.
+Adjacency matrix of a Bayesian network is extracted.
 }
 
 %\references{
 %}
 
 \author{
-Michail Tsagris
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
@@ -55,10 +46,9 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 
 \examples{
 \dontrun{
-# simulate a dataset with continuous data
 x <- matrix( rnorm(200 * 10, 1, 10), nrow = 200 )
-a <- pchc(x)
-bnplot(a$dag)
+a <- pchc::pchc(x)
+pchc::bnmat(a$dag)
 }
 }
 

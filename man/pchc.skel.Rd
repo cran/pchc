@@ -1,15 +1,16 @@
 \name{Skeleton of the PC algorithm}
 \alias{pchc.skel}
 \title{
-The skeleton of a Bayesian network produced by the PC algorithm
+The skeleton of a Bayesian network learned with the PC algorithm
 }
 
 \description{
-The skeleton of a Bayesian network produced by the PC algorithm.
+The skeleton of a Bayesian network learned with the PC algorithm.
 }
 
 \usage{
-pchc.skel(x, method = "pearson", alpha = 0.05, ini.stat = NULL, ini.pvalue = NULL)
+pchc.skel(x, method = "pearson", alpha = 0.05,
+robust = FALSE, ini.stat = NULL, R = NULL)
 }
 
 \arguments{
@@ -24,11 +25,15 @@ this must be "cat". In this case, make sure the minimum value of each variable i
 \item{alpha}{
 The significance leve for assessing the p-values.
 }
+\item{robust}{
+Do you want outliers to be removed prior to applying the PCHC algorithm? If yes, set this to TRUE to utilise the
+MCD.
+}
 \item{ini.stat}{
 If the initial test statistics (univariate associations) are available, pass them through this parameter.
 }
-\item{ini.pvalue}{
-if the initial p-values of the univariate associations are available, pass them through this parameter.
+\item{R}{
+If the correlation matrix is available, pass it here.
 }
 }
 
@@ -57,7 +62,7 @@ The initial p-values univariate associations.
 The logarithm of the p-values of the univariate associations.
 }
 \item{runtime}{
-The amount of time it took to run the algorithm.
+The duration of the algorithm.
 }
 \item{kappa}{
 The maximum value of k, the maximum cardinality of the conditioning set at which the algorithm stopped.
@@ -74,15 +79,15 @@ A list with the separating sets for every value of k.
 }
 
 \references{
-Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA,
-USA, 3nd edition.
+Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
 
-Tsamardinos I., Borboudakis G. (2010) Permutation Testing Improves Bayesian Network Learning. In Machine Learning
-and Knowledge Discovery in Databases. ECML PKDD 2010. 322-337.
+Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. Computational Economics (Accepted for publication).
+
+Tsamardinos I. and Borboudakis G. (2010) Permutation Testing Improves Bayesian Network Learning. In Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2010. 322-337.
 }
 
 \author{
-Michail Tsagris
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
@@ -91,12 +96,12 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{ \link{pchc} }
+\code{ \link{fedhc.skel}, \link{mmhc.skel}, \link{pchc} }
 }
 
 \examples{
 # simulate a dataset with continuous data
-x <- matrix( rnorm(200 * 50, 1, 100), nrow = 200 )
-a <- pchc.skel(x)
+x <- matrix( rnorm(300 * 30, 1, 100), nrow = 300 )
+a <- pchc::pchc.skel(x)
 }
 

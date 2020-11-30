@@ -1,5 +1,5 @@
-pchc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL, R = NULL,
-                 restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL) {
+fedhc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
+                  R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL) {
 
   runtime <- proc.time()
   if ( robust ) {
@@ -14,7 +14,9 @@ pchc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat =
     poia <- c( which(mod$mcd.wt == 1)[ep1],  which(mod$mcd.wt == 0)[ep0] )
     x <- x[-poia, ]
     n <- dim(x)[1]
+    R <- cor(x)
   }
+
   if ( method == "cat"  &  !is.matrix(x) )  {
     for ( i in 1:dim(x)[2] ) x[, i] <- as.numeric(x[, i]) - 1
     x <- as.matrix(x)
@@ -22,9 +24,9 @@ pchc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat =
   if ( method == "pearson"  &  is.null(ini.stat)  &  !is.null(R) ) {
     ini.stat <- 0.5 * log( (1 + R)/( (1 - R) ) ) * sqrt(n - 3)
   }
-  ## score for continuous : "bic-g" (default), "loglik-g", "aic-g", "bge"
-  ## score for discrete : "bic", "loglik", "bde"
-  a <- Rfast::pc.skel(x, method = method, alpha = alpha, stat = ini.stat)
+  ## score for continuous : "bge" (default), "loglik-g", "aic-g", "bic-g", "bge"
+  ## score for discrete : "bde", "loglik", "bic"
+  a <- pchc::fedhc.skel(x, method = method, alpha = alpha, ini.stat = ini.stat, R = R)
   nama <- colnames(x)
   if ( is.null(nama) )  nama <-  paste("X", 1:dim(x)[2], sep = "")
   colnames(x) <- nama
@@ -49,6 +51,5 @@ pchc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat =
     scoring <- bnlearn::score(x = dag, data = x, type = score )
   }
   runtime <- proc.time() - runtime
-  colnames(a$G) <- nama      ;       rownames(a$G) <- nama
   list(ini = a, dag = dag, scoring = scoring, runtime = runtime[3])
 }

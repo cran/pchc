@@ -45,7 +45,7 @@ A numeric vector containing the partial correlation and logged p-value for the t
 \author{
 Michail Tsagris
 
-R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 %\note{
@@ -53,7 +53,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}
 %}
 
 \seealso{
-\code{ \link{cortest}, \link{pc.skel}
+\code{ \link{cortest}, \link{rmcd}
 }
 }
 

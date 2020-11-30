@@ -1,34 +1,31 @@
-\name{The PCHC Bayesian network learning algorithm}
-\alias{pchc}
+\name{The FEDHC Bayesian network learning algorithm}
+\alias{fedhc}
 \title{
-The PCHC Bayesian network learning algorithm
+The FEDHC Bayesian network learning algorithm
 }
 
 \description{
-The PCHC Bayesian network learning algorithm.
+The FEDHC Bayesian network learning algorithm.
 }
 
 \usage{
-pchc(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
+fedhc(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
 R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
 }
 
 \arguments{
 \item{x}{
 A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them into a matrix
-using \code{\link{data.frame.to_matrix}}. Note, that for the categorical case data, the numbers must start from 0.
-No missing data are allowed.
+using \code{\link{data.frame.to_matrix}}. Note, that for the categorical case data, the numbers must start from 0. No missing data are allowed.
 }
 \item{method}{
-If you have continuous data, you can choose either "pearson" or "spearman". If you have categorical data though,
-this must be "cat". In this case, make sure the minimum value of each variable is zero. The \code{\link{g2test}}
-and the relevant functions work that way.
+If you have continuous data, you can choose either "pearson" or "spearman". If you have categorical data though, this must be "cat". In this case, make sure the minimum value of each variable is zero. The \code{\link{g2test}} and the relevant functions work that way.
 }
 \item{alpha}{
 The significance level for assessing the p-values.
 }
 \item{robust}{
-Do you want outliers to be removed prior to applying the PCHC algorithm? If yes, set this to TRUE to utilise the MCD.
+Do you want outliers to be removed prior to applying the FEDHC algorithm? If yes, set this to TRUE to utilise the MCD.
 }
 \item{ini.stat}{
 If the initial test statistics (univariate associations) are available, pass them through this parameter.
@@ -56,13 +53,13 @@ included in the graph.
 }
 
 \details{
-The PC algorithm as proposed by Spirtes et al. (2000) is first implemented followed by a scoring phase, such as hill climbing.
+The FEDHC algorithm.
 }
 
 \value{
 A list including:
 \item{ini}{
-A list including the output of the \code{ \link{pchc.skel} } function.
+A list including the output of the \code{ \link{mmhc.skel} } function.
 }
 \item{dag}{
 A "bn" class output. A list including the outcome of the Hill-Climbing phase. See the package "bnlearn" for more details.
@@ -76,19 +73,14 @@ The duration of the algorithm.
 }
 
 \references{
-Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
-Computational Economics (Accepted for publication).
-
-Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
-
-Tsamardinos I. and Borboudakis G. (2010) Permutation Testing Improves Bayesian Network Learning. In Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2010. 322-337.
+Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. Journal of Machine Learning Research, 20(8): 1-39.
 
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
-structure learning algorithm. Machine learning 65(1): 31-78.
+structure learning algorithm. Machine learning 65(1):31-78.
 }
 
 \author{
-Michail Tsagris.
+Michail Tsagris
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
@@ -97,12 +89,11 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{\link{fedhc}, \link{mmhc}, \link{pchc.skel} }
+\code{ \link{pchc}, \link{mmhc}, link{fedhc.skel} }
 }
 
 \examples{
 # simulate a dataset with continuous data
-x <- matrix( rnorm(400 * 30, 1, 10), nrow = 400 )
-a <- pchc(x)
+x <- matrix( rnorm(200 * 50, 1, 10), nrow = 200 )
+a <- fedhc(x)
 }
-
