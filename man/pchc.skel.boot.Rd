@@ -72,7 +72,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{ \link{bn.skel.utils}, \link{pchc.skel}, \link{fedhc.skel}, \link{mmhc.skel}
+\code{ \link{pchc.skel}, \link{fedhc.skel}, \link{mmhc.skel}, \link{bn.skel.utils}
 }
 }
 

@@ -72,7 +72,7 @@ Tsamardinos, I., Aliferis, C. F. and Statnikov, A. (2003). Time and sample effic
 Brown, L. E., Tsamardinos, I. and Aliferis, C. F. (2004). A novel algorithm for scalable and accurate Bayesian network learning. Medinfo, 711-715.
 
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
-structure learning algorithm. Machine learning 65(1):31-78.
+structure learning algorithm. Machine Learning 65(1):31-78.
 }
 
 \author{
@@ -85,7 +85,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{ \link{pchc.skel}, \link{mmhc.skel}, \link{mmhc}  }
+\code{ \link{pchc.skel}, \link{mmhc.skel}, \link{mmhc}, \link{mmhc.skel.boot}  }
 }
 
 \examples{

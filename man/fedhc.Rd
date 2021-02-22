@@ -73,10 +73,12 @@ The duration of the algorithm.
 }
 
 \references{
+Tsagris M. (2020). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+
 Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. Journal of Machine Learning Research, 20(8): 1-39.
 
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
-structure learning algorithm. Machine learning 65(1):31-78.
+structure learning algorithm. Machine Learning 65(1):31-78.
 }
 
 \author{
