@@ -138,6 +138,7 @@ mmhc.skel <- function(x, method = "pearson", max_k = 3, alpha = 0.05, robust = F
 
   a <- which( G == 1  &  t(G) == 1 )
   G[ -a ] <- 0
+  pvalue <- pmax( pvalue, t(pvalue) )
 
   runtime <- proc.time() - runtime
 

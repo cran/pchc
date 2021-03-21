@@ -1,16 +1,20 @@
-\name{The FEDHC Bayesian network learning algorithm}
+\name{The FEDHC and FEDTABU Bayesian network learning algorithms}
 \alias{fedhc}
+\alias{fedtabu}
 \title{
-The FEDHC Bayesian network learning algorithm
+The FEDHC and FEDTABU Bayesian network learning algorithms
 }
 
 \description{
-The FEDHC Bayesian network learning algorithm.
+The FEDHC and FEDTABU Bayesian network learning algorithms.
 }
 
 \usage{
 fedhc(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
 R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+
+fedtabu(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
+R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
 }
 
 \arguments{
@@ -36,6 +40,9 @@ If the correlation matrix is available, pass it here.
 \item{restart}{
 An integer, the number of random restarts.
 }
+\item{tabu}{
+An integer, the length of the tabu list used in the tabu function.
+}
 \item{score}{
 A character string, the label of the network score to be used in the algorithm. If none is specified,
 the default score is the Bayesian Information Criterion for both discrete and continuous data sets.
@@ -53,16 +60,18 @@ included in the graph.
 }
 
 \details{
-The FEDHC algorithm.
+The FEDHC algorithm is implemented. The FBED algortihm (Borboudakis and Tsamardinos, 2019), without the 
+backward phase, is implemented during the skeleton identification phase. Next, the Hill Climbing greedy 
+search or the Tabu search is employed to score the network.
 }
 
 \value{
 A list including:
 \item{ini}{
-A list including the output of the \code{ \link{mmhc.skel} } function.
+A list including the output of the \code{ \link{fedhc.skel} } function.
 }
 \item{dag}{
-A "bn" class output. A list including the outcome of the Hill-Climbing phase. See the package "bnlearn" for more details.
+A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase. See the package "bnlearn" for more details.
 }
 \item{scoring}{
 The score value.
@@ -78,11 +87,11 @@ Tsagris M. (2020). The FEDHC Bayesian network learning algorithm. https://arxiv.
 Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. Journal of Machine Learning Research, 20(8): 1-39.
 
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
-structure learning algorithm. Machine Learning 65(1):31-78.
+structure learning algorithm. Machine Learning, 65(1):31-78.
 }
 
 \author{
-Michail Tsagris
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
@@ -91,7 +100,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{ \link{pchc}, \link{mmhc}, link{fedhc.skel} }
+\code{ \link{pchc}, \link{mmhc}, \link{fedhc.skel} }
 }
 
 \examples{

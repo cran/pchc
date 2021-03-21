@@ -112,6 +112,7 @@ fedhc.skel <- function(x, method = "pearson", alpha = 0.05, robust = FALSE,
 
   a <- which( G == 1  &  t(G) == 1 )
   G[ -a ] <- 0
+  pvalue <- pmax( pvalue, t(pvalue) )
 
   runtime <- proc.time() - runtime
 

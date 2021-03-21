@@ -6,15 +6,15 @@ Bayesian Network Learning with the PCHC and Related Algorithms
 }
 
 \description{
-The original version of this package was to learn Bayesian networks with the PCHC algorithm. PCHC stands for PC Hill-Climbing. It is a new hybrid algorithm that used PC to construct the skeleton of the BN and then utilizes the Hill-Climbing greedy search. The relevant paper has been submitted and is currently in revision. The package has been expanded to include the MMHC and the FEDHC algortihms.
+The original version of this package was to learn Bayesian networks with the PCHC algorithm. PCHC stands for PC Hill-Climbing. It is a new hybrid algorithm that used PC to construct the skeleton of the BN and then utilizes the Hill-Climbing greedy search. The package has been expanded to include the MMHC and the FEDHC algortihms. It further includes the PCTABU, MMTABU and FEDTABU algortihms which are pretty much similar. Instead of the Hill Climbing greey search the Tabu search is employed.
 }
 
 \details{
 \tabular{ll}{
 Package: \tab pchc\cr
 Type: \tab Package\cr
-Version: \tab 0.4 \cr
-Date: \tab 2021-02-22\cr
+Version: \tab 0.5 \cr
+Date: \tab 2021-03-21\cr
 License: \tab GPL-2\cr
 }
 }

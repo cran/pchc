@@ -1,4 +1,4 @@
-\name{FBED variable selection method using the correlation}
+\name{Variable selection for continuous data using the FBED algorithm}
 \alias{cor.fbed}
 \title{
 FBED variable selection method using the correlation

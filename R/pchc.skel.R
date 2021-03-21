@@ -27,5 +27,5 @@ pchc.skel <- function (x, method = "pearson", alpha = 0.05, robust = FALSE,
     ini.stat <- 0.5 * log( (1 + R)/( (1 - R) ) ) * sqrt(n - 3)
   }
 
-  Rfast::pc.skel(x, method, alpha, R = 1, stat = ini.stat)
+  mod <- Rfast::pc.skel(x, method, alpha, R = 1, stat = ini.stat)
 }

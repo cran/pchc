@@ -55,6 +55,8 @@ The duration of the algorithm.
 \references{
 Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. Computational Economics (Accepted for publication).
 
+Tsagris M. (2020). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+
 Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
 
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network structure learning algorithm. Machine learning 65(1): 31-78.
@@ -79,7 +81,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 \examples{
 \donttest{
 x <- pchc::rbn2(500, p = 20, nei = 3)$x
-a <- pchc::pchc.skel.boot(x, threshold = 0.05)
+a <- pchc::pchc.skel.boot(x, alpha = 0.05)
 }
 }
 

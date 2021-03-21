@@ -1,16 +1,20 @@
-\name{The MMHC Bayesian network learning algorithm}
+\name{The MMHC and MMTABU Bayesian network learning algorithms}
 \alias{mmhc}
+\alias{mmtabu}
 \title{
-The MMHC Bayesian network learning algorithm
+The MMHC and MMTABU Bayesian network learning algorithms
 }
 
 \description{
-The MMHC Bayesian network learning algorithm.
+The MMHC and MMTABU Bayesian network learning algorithms.
 }
 
 \usage{
 mmhc(x, method = "pearson", max_k = 3, alpha = 0.05, robust = FALSE, ini.stat = NULL,
 R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+
+mmtabu(x, method = "pearson", max_k = 3, alpha = 0.05, robust = FALSE, ini.stat = NULL,
+R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
 }
 
 \arguments{
@@ -31,7 +35,7 @@ The maximum conditioning set to use in the conditional indepedence test (see Det
 The significance level for assessing the p-values.
 }
 \item{robust}{
-Do you want outliers to be removed prior to applying the PCHC algorithm? If yes, set this to TRUE to utilise the MCD.
+Do you want outliers to be removed prior to applying the MMHC algorithm? If yes, set this to TRUE to utilise the MCD.
 }
 \item{ini.stat}{
 If the initial test statistics (univariate associations) are available, pass them through this parameter.
@@ -41,6 +45,9 @@ If the correlation matrix is available, pass it here.
 }
 \item{restart}{
 An integer, the number of random restarts.
+}
+\item{tabu}{
+An integer, the length of the tabu list used in the tabu function.
 }
 \item{score}{
 A character string, the label of the network score to be used in the algorithm. If none is specified,
@@ -60,6 +67,7 @@ included in the graph.
 
 \details{
 The MMHC algorithm is implemented without performing the backward elimination during the skeleton identification phase.
+The MMHC as described in Tsamardinos et al. (2006) employs the MMPC algorithm during the skeleton construction phase and the Tabu search in the scoring phase. In this package, the mmhc function employs the Hill Climbing greedy search in the scoring phase while the mmtabu employs the Tabu search.
 }
 
 \value{
@@ -68,7 +76,7 @@ A list including:
 A list including the output of the \code{ \link{mmhc.skel} } function.
 }
 \item{dag}{
-A "bn" class output. A list including the outcome of the Hill-Climbing phase. See the package "bnlearn" for more details.
+A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase. See the package "bnlearn" for more details.
 }
 \item{scoring}{
 The score value.
@@ -79,9 +87,9 @@ The duration of the algorithm.
 }
 
 \references{
-Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network structure learning algorithm. Machine Learning 65(1): 31-78.
+Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network structure learning algorithm. Machine Learning, 65(1): 31-78.
 
-Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. Computational Economics (Accepted for publication).
+Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. Computational Economics, 57(1):341-367.
 }
 
 \author{
