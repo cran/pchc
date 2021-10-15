@@ -20,7 +20,7 @@ pchc.skel <- function (x, method = "pearson", alpha = 0.05, robust = FALSE,
 
   if ( method == "cat"  &  !is.matrix(x) )  {
     for ( i in 1:dim(x)[2] )  x[, i] <- as.numeric(x[, i]) - 1
-    x <- as.matrix(x)
+    x <- Rfast::data.frame.to_matrix(x, col.names = colnames(x) )
   }
 
   if ( method == "pearson"  &  is.null(ini.stat)  &  !is.null(R) ) {

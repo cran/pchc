@@ -1,20 +1,20 @@
-\name{The MMHC and MMTABU Bayesian network learning algorithms}
-\alias{mmhc}
-\alias{mmtabu}
+\name{Bootstrapping the MMHC and MMTABU Bayesian network learning algorithms}
+\alias{mmhc.boot}
+\alias{mmtabu.boot}
 \title{
-The MMHC and MMTABU Bayesian network learning algorithms
+Bootstrapping the MMHC and MMTABU Bayesian network learning algorithms
 }
 
 \description{
-The MMHC and MMTABU Bayesian network learning algorithms.
+Bootstrapping the MMHC and MMTABU Bayesian network learning algorithms.
 }
 
 \usage{
-mmhc(x, method = "pearson", max_k = 3, alpha = 0.05, robust = FALSE, ini.stat = NULL,
-R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+mmhc.boot(x, method = "pearson", max_k = 3, alpha = 0.05, ini.stat = NULL,
+R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200)
 
-mmtabu(x, method = "pearson", max_k = 3, alpha = 0.05, robust = FALSE, ini.stat = NULL,
-R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+mmtabu.boot(x, method = "pearson", max_k = 3, alpha = 0.05, ini.stat = NULL,
+R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200)
 }
 
 \arguments{
@@ -33,9 +33,6 @@ The maximum conditioning set to use in the conditional indepedence test (see Det
 }
 \item{alpha}{
 The significance level for assessing the p-values.
-}
-\item{robust}{
-Do you want outliers to be removed prior to applying the MMHC algorithm? If yes, set this to TRUE to utilise the MCD.
 }
 \item{ini.stat}{
 If the initial test statistics (univariate associations) are available, pass them through this parameter.
@@ -63,23 +60,22 @@ be included in the graph.
 A data frame with two columns (optionally labeled "from" and "to"), containing a set of arcs to be
 included in the graph.
 }
+\item{B}{
+The number of bootstrap resamples to draw. The algorithm is performed in each bootstrap sample. In the end, the adjacency matrix on the observed data is returned, along with another adjacency matrix produced by the bootstrap. The latter one contains values from 0 to 1 indicating the proportion of times an edge between two nodes was present.
+}
 }
 
 \details{
-The MMHC algorithm is implemented without performing the backward elimination during the skeleton identification phase.
-The MMHC as described in Tsamardinos et al. (2006) employs the MMPC algorithm during the skeleton construction phase and the Tabu search in the scoring phase. In this package, the mmhc function employs the Hill Climbing greedy search in the scoring phase while the mmtabu employs the Tabu search.
+The MMHC algorithm is implemented without performing the backward elimination during the skeleton identification phase. The MMHC as described in Tsamardinos et al. (2006) employs the MMPC algorithm during the skeleton construction phase and the Tabu search in the scoring phase. In this package, the mmhc function employs the Hill Climbing greedy search in the scoring phase while the mmtabu employs the Tabu search.
 }
 
 \value{
 A list including:
-\item{ini}{
-A list including the output of the \code{ \link{mmhc.skel} } function.
+\item{mod}{
+A list including the output of the \code{ \link{mmhc} } or the \code{ \link{mmtabu} }  function.
 }
-\item{dag}{
-A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase. See the package "bnlearn" for more details.
-}
-\item{scoring}{
-The score value.
+\item{Gboot}{
+The bootstrapped adjancency matrix of the Bayesian network.
 }
 \item{runtime}{
 The duration of the algorithm.
@@ -107,7 +103,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 
 \examples{
 # simulate a dataset with continuous data
-x <- matrix( rnorm(300 * 30, 1, 10), nrow = 300 )
-a <- mmhc(x)
+x <- matrix( rnorm(200 * 20, 1, 10), nrow = 200 )
+a <- mmhc.boot(x, B = 50)
 }
 

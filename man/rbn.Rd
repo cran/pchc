@@ -37,7 +37,7 @@ Korb K. and Nicholson A.E. (2010).Bayesian Artificial Intelligence. Chapman & Ha
 }
 
 \author{
-Michail Tsagris
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }

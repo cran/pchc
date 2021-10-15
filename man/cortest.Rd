@@ -51,7 +51,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 
 
 \seealso{
-\code{\link{pcor}, \link{rmcd}
+\code{\link{pcor}, \link{correls}, \link{corpairs}
 }
 }
 

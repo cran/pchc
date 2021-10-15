@@ -60,7 +60,7 @@ Journal of Machine Learning Research, 20(8): 1-39.
 }
 
 \author{
-Michail Tsagris
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }

@@ -85,7 +85,9 @@ Colombo, Diego, and Marloes H. Maathuis (2014). Order-independent constraint-bas
 }
 
 \author{
-R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}
+Michail Tsagris.
+
+R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 

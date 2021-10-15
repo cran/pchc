@@ -1,20 +1,20 @@
-\name{The FEDHC and FEDTABU Bayesian network learning algorithms}
-\alias{fedhc}
-\alias{fedtabu}
+\name{Bootstrapping the FEDHC and FEDTABU Bayesian network learning algorithms}
+\alias{fedhc.boot}
+\alias{fedtabu.boot}
 \title{
-The FEDHC and FEDTABU Bayesian network learning algorithms
+Bootstrapping the FEDHC and FEDTABU Bayesian network learning algorithms
 }
 
 \description{
-The FEDHC and FEDTABU Bayesian network learning algorithms.
+Bootstrapping the FEDHC and FEDTABU Bayesian network learning algorithms.
 }
 
 \usage{
-fedhc(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
-R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+fedhc.boot(x, method = "pearson", alpha = 0.05, ini.stat = NULL, R = NULL,
+restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200)
 
-fedtabu(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
-R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+fedtabu.boot(x, method = "pearson", alpha = 0.05, ini.stat = NULL, R = NULL,
+tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200)
 }
 
 \arguments{
@@ -27,9 +27,6 @@ If you have continuous data, you can choose either "pearson" or "spearman". If y
 }
 \item{alpha}{
 The significance level for assessing the p-values.
-}
-\item{robust}{
-Do you want outliers to be removed prior to applying the FEDHC algorithm? If yes, set this to TRUE to utilise the MCD.
 }
 \item{ini.stat}{
 If the initial test statistics (univariate associations) are available, pass them through this parameter.
@@ -57,6 +54,9 @@ be included in the graph.
 A data frame with two columns (optionally labeled "from" and "to"), containing a set of arcs to be
 included in the graph.
 }
+\item{B}{
+The number of bootstrap resamples to draw. The algorithm is performed in each bootstrap sample. In the end, the adjacency matrix on the observed data is returned, along with another adjacency matrix produced by the bootstrap. The latter one contains values from 0 to 1 indicating the proportion of times an edge between two nodes was present.
+}
 }
 
 \details{
@@ -67,14 +67,11 @@ search or the Tabu search is employed to score the network.
 
 \value{
 A list including:
-\item{ini}{
-A list including the output of the \code{ \link{fedhc.skel} } function.
+\item{mod}{
+A list including the output of the \code{ \link{pchc} } or the \code{ \link{pctabu} }  function.
 }
-\item{dag}{
-A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase. See the package "bnlearn" for more details.
-}
-\item{scoring}{
-The score value.
+\item{Gboot}{
+The bootstrapped adjancency matrix of the Bayesian network.
 }
 \item{runtime}{
 The duration of the algorithm.
@@ -105,6 +102,6 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 
 \examples{
 # simulate a dataset with continuous data
-x <- matrix( rnorm(300 * 30, 1, 10), nrow = 300 )
-a <- fedhc(x)
+x <- matrix( rnorm(200 * 20, 1, 10), nrow = 200 )
+a <- fedhc.boot(x, B = 50)
 }

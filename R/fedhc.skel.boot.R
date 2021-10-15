@@ -4,15 +4,12 @@ fedhc.skel.boot <- function(x, method = "pearson", alpha = 0.05, B = 200) {
   n <- dm[1]   ;     p <- dm[2]
 
   runtime <- proc.time()
-  gboot <- matrix(0, nrow = B, ncol = p^2)
+  Gboot <- matrix(0, p, p)
   for (i in 1:B) {
     id <- sample(n, n, replace = TRUE)
-    gb <- pchc::fedhc.skel(x = x[id, ], method = method, alpha = alpha)$G
-    gboot[i, ] <- as.vector(gb)
+    Gboot <- Gboot + pchc::fedhc.skel(x = x[id, ], method = method, alpha = alpha)$G
   }  ## end for (i in 1:B)
   runtime <- proc.time() - runtime
 
-  Gboot <- Rfast::colmeans(gboot)
-  Gboot <- matrix(Gboot, nrow = p, ncol = p)
-  list(G = G, Gboot = Gboot, runtime = runtime)
+  list(G = G, Gboot = Gboot/B, runtime = runtime)
 }

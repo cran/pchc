@@ -13,8 +13,8 @@ The original version of this package was to learn Bayesian networks with the PCH
 \tabular{ll}{
 Package: \tab pchc\cr
 Type: \tab Package\cr
-Version: \tab 0.5 \cr
-Date: \tab 2021-03-21\cr
+Version: \tab 0.6 \cr
+Date: \tab 2021-10-16\cr
 License: \tab GPL-2\cr
 }
 }
@@ -31,7 +31,7 @@ Michail Tsagris <mtsagris@uoc.gr>
 Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
 Computational Economics (To appear).
 
-Tsagris M. (2020). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+Tsagris M. (2021). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
 
 Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
 

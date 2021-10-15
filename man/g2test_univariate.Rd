@@ -66,7 +66,7 @@ In Joint European Conference on Machine Learning and Knowledge Discovery in Data
 }
 
 \author{
-Michail Tsagris
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }

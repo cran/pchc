@@ -1,4 +1,4 @@
-mmhc <- function(x, method = "pearson",  max_k = 3, alpha = 0.05, robust = FALSE, ini.stat = NULL,
+mmhc <- function(x, method = "pearson", max_k = 3, alpha = 0.05, robust = FALSE, ini.stat = NULL,
                  R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL) {
 
   runtime <- proc.time()
@@ -18,7 +18,7 @@ mmhc <- function(x, method = "pearson",  max_k = 3, alpha = 0.05, robust = FALSE
   }
   if ( method == "cat"  &  !is.matrix(x) )  {
     for ( i in 1:dim(x)[2] ) x[, i] <- as.numeric(x[, i]) - 1
-    x <- as.matrix(x)
+    x <- Rfast::data.frame.to_matrix(x, col.names = colnames(x) )
   }
   if ( method == "pearson"  &  is.null(ini.stat)  &  !is.null(R) ) {
     ini.stat <- 0.5 * log( (1 + R)/( (1 - R) ) ) * sqrt(n - 3)

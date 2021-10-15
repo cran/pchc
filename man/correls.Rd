@@ -51,7 +51,7 @@ R implementation and documentation: Michail Tsagris <mtsagris@uoc.gr>.
 
 
 \seealso{
-\code{\link{cortest}
+\code{\link{corpairs}, \link{cortest}, \link{pcor}
 }
 }
 
