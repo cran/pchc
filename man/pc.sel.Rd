@@ -1,11 +1,11 @@
 \name{Variable selection for continuous data using the PC-simple algorithm}
 \alias{pc.sel}
 
-\title{Variable selection using the PC-simple algorithm
+\title{Variable selection for continuous data using the PC-simple algorithm
 }
 
 \description{
-Variable selection using the PC-simple algorithm.
+Variable selection for continuous data using the PC-simple algorithm.
 }
 
 \usage{

@@ -71,7 +71,8 @@ A list including:
 A list including the output of the \code{ \link{fedhc.skel} } function.
 }
 \item{dag}{
-A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase. See the package "bnlearn" for more details.
+A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase. 
+See the package "bnlearn" for more details.
 }
 \item{scoring}{
 The score value.
@@ -82,9 +83,10 @@ The duration of the algorithm.
 }
 
 \references{
-Tsagris M. (2020). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+Tsagris M. (2022). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
 
-Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. Journal of Machine Learning Research, 20(8): 1-39.
+Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. 
+Journal of Machine Learning Research, 20(8): 1-39.
 
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
 structure learning algorithm. Machine Learning, 65(1):31-78.

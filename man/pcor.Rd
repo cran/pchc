@@ -14,7 +14,7 @@ pcor(R, indx, indy, indz, n)
 
 \arguments{
 \item{R}{
-A correlation matrix.
+A correlation or covariance matrix.
 }
 \item{indx}{
 The index of the first variable whose conditional correlation is to estimated.
@@ -31,7 +31,7 @@ The sample size of the data from which the correlation matrix was computed.
 }
 
 \details{
-Given a correlation matrix the function will caclulate the partial correlation between variables indx and indy conditioning on variable(s) indz and will return the logarithm of the p-value.
+Given a correlation or a covariance matrix the function will caclulate the partial correlation between variables indx and indy conditioning on variable(s) indz and will return the logarithm of the p-value.
 }
 
 \value{
@@ -43,7 +43,7 @@ A numeric vector containing the partial correlation and logged p-value for the t
 %}
 
 \author{
-Michail Tsagris
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
@@ -53,7 +53,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %}
 
 \seealso{
-\code{ \link{cortest}, \link{rmcd}
+\code{ \link{cor2pcor}, \link{cortest}, \link{correls}
 }
 }
 

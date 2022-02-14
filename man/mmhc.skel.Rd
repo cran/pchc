@@ -10,7 +10,7 @@ The skeleton of a Bayesian network learned with the MMHC algorithm.
 
 \usage{
 mmhc.skel(x, method = "pearson", max_k = 3, alpha = 0.05,
-robust = FALSE, ini.stat = NULL, R = NULL)
+robust = FALSE, ini.stat = NULL, R = NULL, parallel = FALSE)
 }
 
 \arguments{
@@ -38,6 +38,10 @@ If the initial test statistics (univariate associations) are available, pass the
 }
 \item{R}{
 If the correlation matrix is available, pass it here.
+}
+\item{parallel}{
+Set this to TRUE if you have millions of observations. In that instance it can reduce the
+computaitonal time by 1/3.
 }
 }
 

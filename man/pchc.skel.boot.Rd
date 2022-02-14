@@ -53,19 +53,23 @@ The duration of the algorithm.
 }
 
 \references{
-Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. Computational Economics (Accepted for publication).
+Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. 
+Computational Economics (Accepted for publication).
 
-Tsagris M. (2020). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+Tsagris M. (2022). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
 
-Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
+Spirtes P., Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. 
+The MIT Press, Cambridge, MA, USA, 3nd edition.
 
-Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network structure learning algorithm. Machine learning 65(1): 31-78.
+Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network 
+structure learning algorithm. Machine learning 65(1): 31-78.
 
-Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. Journal of Machine Learning Research, 20(8): 1-39.
+Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. 
+Journal of Machine Learning Research, 20(8): 1-39.
 }
 
 \author{
- Michail Tsagris.
+Michail Tsagris.
 
 R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }

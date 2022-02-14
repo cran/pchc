@@ -1,11 +1,11 @@
 \name{Variable selection for continuous data using the MMPC algorithm}
 \alias{mmpc}
 \title{
-Max-Min Parents and Children variable selection algorithm for continuous responses
+Variable selection for continuous data using the MMPC algorithm
 }
 
 \description{
-Max-Min Parents and Children variable selection algorithm for continuous responses.
+Variable selection for continuous data using the MMPC algorithm.
 }
 
 \usage{

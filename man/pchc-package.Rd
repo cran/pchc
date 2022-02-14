@@ -13,8 +13,8 @@ The original version of this package was to learn Bayesian networks with the PCH
 \tabular{ll}{
 Package: \tab pchc\cr
 Type: \tab Package\cr
-Version: \tab 0.6 \cr
-Date: \tab 2021-10-16\cr
+Version: \tab 0.7 \cr
+Date: \tab 2022-02-14\cr
 License: \tab GPL-2\cr
 }
 }
@@ -23,19 +23,21 @@ License: \tab GPL-2\cr
 Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
-\section{Maintainers }{
+\section{Maintainers}{
 Michail Tsagris <mtsagris@uoc.gr>
 }
 
 \references{
+Tsagris M. (2022). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+
 Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
-Computational Economics (To appear).
+Computational Economics 57(1): 341-367.
 
-Tsagris M. (2021). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. 
+The MIT Press, Cambridge, MA, USA, 3nd edition.
 
-Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
-
-Tsamardinos I., Borboudakis G. (2010) Permutation Testing Improves Bayesian Network Learning. In Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2010. 322-337.
+Tsamardinos I., Borboudakis G. (2010) Permutation Testing Improves Bayesian Network Learning. 
+In Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2010. 322-337.
 
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
 structure learning algorithm. Machine learning 65(1):31-78.
@@ -43,7 +45,8 @@ structure learning algorithm. Machine learning 65(1):31-78.
 Tsagris M. (2017). Conditional independence test for categorical data using Poisson log-linear model.
 Journal of Data Science, 15(2):347-356.
 
-Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. Journal of Machine Learning Research, 20(8): 1-39.
+Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. 
+Journal of Machine Learning Research, 20(8): 1-39.
 }
 
 %\note{

@@ -79,11 +79,14 @@ A list with the separating sets for every value of k.
 }
 
 \references{
-Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
+Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. 
+The MIT Press, Cambridge, MA, USA, 3nd edition.
 
-Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. Computational Economics (Accepted for publication).
+Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. 
+Computational Economics (Accepted for publication).
 
-Tsamardinos I. and Borboudakis G. (2010) Permutation Testing Improves Bayesian Network Learning. In Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2010. 322-337.
+Tsamardinos I. and Borboudakis G. (2010) Permutation Testing Improves Bayesian Network Learning. 
+In Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2010. 322-337.
 }
 
 \author{
