@@ -50,7 +50,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 \examples{
-\dontrun{
+\donttest{
 dataset <- matrix( runif(100 * 50, 1, 100), ncol = 50 )
 read.csv(data, "dataset.csv", sep = ",")
 a <- big_read("dataset.csv", header = TRUE)

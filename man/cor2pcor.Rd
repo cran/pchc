@@ -48,7 +48,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 \examples{
 x <- as.matrix(iris[, 1:4])
 R <- cor(x)
-cov2cor(R)
+cor2pcor(R)
 pcor(R, 1, 2, 3:4, n = 150)
 }
 

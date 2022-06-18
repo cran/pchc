@@ -59,7 +59,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 \examples{
-\dontrun{
+\donttest{
 y <- pchc::rbn3(1000, 10, 0.3)
 tru <- y$G
 x <- y$x

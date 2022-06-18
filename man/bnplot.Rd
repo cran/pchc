@@ -54,7 +54,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 \examples{
-\dontrun{
+\donttest{
 # simulate a dataset with continuous data
 x <- matrix( rnorm(200 * 10, 1, 10), nrow = 200 )
 a <- pchc(x)

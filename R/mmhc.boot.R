@@ -9,7 +9,7 @@ mmhc.boot <- function(x, method = "pearson", max_k = 3, alpha = 0.05, ini.stat =
   runtime <- proc.time()
   Gboot <- matrix(0, p, p)
   for (i in 1:B) {
-    id <- sample(n, n, replace = TRUE)
+    id <- Rfast2::Sample.int(n, n, replace = TRUE)
     gb <- pchc::mmhc(x[id, ], method = method, max_k = max_k, alpha = alpha, restart = restart,
                      score = score, blacklist = blacklist, whitelist = whitelist)
     Gboot <- Gboot + pchc::bnmat(gb$dag)

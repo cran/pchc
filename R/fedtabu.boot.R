@@ -9,7 +9,7 @@ fedtabu.boot <- function(x, method = "pearson", alpha = 0.05, ini.stat = NULL,
   runtime <- proc.time()
   Gboot <- matrix(0, p, p)
   for (i in 1:B) {
-    id <- sample(n, n, replace = TRUE)
+    id <- Rfast2::Sample.int(n, n, replace = TRUE)
     gb <- pchc::fedtabu(x[id, ], method = method, alpha = alpha, tabu = tabu,
                         score = score, blacklist = blacklist, whitelist = whitelist)
     Gboot <- Gboot + pchc::bnmat(gb$dag)

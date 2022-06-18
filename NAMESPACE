@@ -16,6 +16,8 @@ importFrom("robustbase", covMcd)
 
 importFrom("bigstatsr", big_cor, big_copy, big_read)
 
+importFrom("dcov", mdcor, pdcor)
+
 exportPattern("^[[:alpha:]]+")
 exportPattern("^[^\\.]")
 

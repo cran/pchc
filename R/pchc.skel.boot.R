@@ -6,7 +6,7 @@ pchc.skel.boot <- function(x, method = "pearson", alpha = 0.05, B = 200) {
   runtime <- proc.time()
   Gboot <- matrix(0, p, p)
   for (i in 1:B) {
-    id <- sample(n, n, replace = TRUE)
+    id <- Rfast2::Sample.int(n, n, replace = TRUE)
     Gboot <- Gboot + pchc::pchc.skel(x = x[id, ], method = method, alpha = alpha)$G
   }  ## end for (i in 1:B)
   runtime <- proc.time() - runtime
