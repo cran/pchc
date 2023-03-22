@@ -81,7 +81,7 @@ International Journal of Data Science and Analytics.
 
 Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. The MIT Press, Cambridge, MA, USA, 3nd edition.
 
-Colombo, Diego, and Marloes H. Maathuis (2014). Order-independent constraint-based causal structure learning. Journal of Machine Learning Research 15(1): 3741--3782.
+Colombo Diego, and Marloes H. Maathuis (2014). Order-independent constraint-based causal structure learning. Journal of Machine Learning Research 15(1): 3741--3782.
 }
 
 \author{
@@ -97,13 +97,8 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 
 \examples{
 \donttest{
-y <- pchc::rbn3(100, 20, 0.2)
-x <- y$x
-tru <- y$G
-
+x <- pchc::rbn3(100, 20, 0.2)$x
 a <- pchc::pchc(x)
-pchc::bnplot(tru)
-pchc::bnplot(a$dag)
 }
 }
 

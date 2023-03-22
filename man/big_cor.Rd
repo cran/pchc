@@ -19,9 +19,8 @@ An FBM class matrix.
 }
 
 \details{
-The function accepts an Filebacked Big Matrix (FBM) class matrix and returns the correlation matrix.
-Check you matrix for possible NA values.
-For more information see the "bigmemory" and "bigstatsr" packages.
+The function accepts a Filebacked Big Matrix (FBM) class matrix and returns the correlation matrix.
+Check you matrix for possible NA values. For more information see the "bigmemory" and "bigstatsr" packages.
 }
 
 \value{
@@ -40,14 +39,12 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 
 \examples{
 \donttest{
+if (require("bigreadr") ) {
 dataset <- matrix( runif(100 * 50, 1, 100), ncol = 50 )
 write.csv(dataset, "dataset.csv", row.names = FALSE)
-x <- pchc::big_read("dataset.csv", header = TRUE)
-a <- pchc::big_cor(x) ## No NA values
-
-write.csv(dataset, "dataset.csv")
-x <- pchc::big_read("dataset.csv", header = TRUE)
-a <- pchc::big_cor(x) ## it contains NA values
+x <- pchc::big_read("dataset.csv", select = 1:50, header = TRUE)
+a <- pchc::big_cor(x)
+}
 }
 }
 

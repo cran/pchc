@@ -13,8 +13,8 @@ The original version of this package was to learn Bayesian networks with the PCH
 \tabular{ll}{
 Package: \tab pchc\cr
 Type: \tab Package\cr
-Version: \tab 0.8 \cr
-Date: \tab 2022-06-18\cr
+Version: \tab 0.9 \cr
+Date: \tab 2023-03-21\cr
 License: \tab GPL-2\cr
 }
 }
@@ -28,7 +28,7 @@ Michail Tsagris <mtsagris@uoc.gr>
 }
 
 \references{
-Tsagris M. (2022). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+Tsagris M. (2022). The FEDHC Bayesian Network Learning Algorithm. Mathematics 2022, 10(15), 2604.
 
 Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
 Computational Economics 57(1): 341-367.

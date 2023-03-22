@@ -48,7 +48,7 @@ This argument is used for the avoidance of the hash re-calculation, in the case 
 Please note that the generated hash object should be used only when the same dataset is re-analyzed, possibly with different values of max_k and alpha.
 }
 \item{backward}{
-Boolean value for the activation of the backward/symmetry correction phase. This option removes and falsely included variables in the parents and children set of the target variable. It calls the \code{link{mmpc_bp}} for this purpose. The backward option seems dubious. Please do not use at the moment.
+Boolean value for the activation of the backward/symmetry correction phase. This option removes and falsely included variables in the parents and children set of the target variable. The backward option seems dubious. Please do not use at the moment.
 }
 }
 
@@ -117,7 +117,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 }
 
 \seealso{
-\code{\link{cor.fbed}, pc.sel}
+\code{\link{cor.fbed}, \link{pc.sel}}
 }
 
 \examples{

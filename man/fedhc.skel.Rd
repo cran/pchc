@@ -91,7 +91,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{ \link{pchc.skel}, \link{mmhc.skel}, \link{fedhc}, \link{fedhc.skel.boot} }
+\code{ \link{pchc.skel}, \link{mmhc.skel}, \link{fedhc}, \link{fedhc.skel.boot}, \link{dcor.fedhc.skel} }
 }
 
 \examples{

@@ -53,10 +53,10 @@ The duration of the algorithm.
 }
 
 \references{
-Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. 
-Computational Economics (Accepted for publication).
+A new scalable Bayesian network learning algorithm with applications to economics. 
+Computational Economics, 57(1): 341-367.
 
-Tsagris M. (2022). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+Tsagris M. (2022). The FEDHC Bayesian Network Learning Algorithm. Mathematics 2022, 10(15), 2604.
 
 Spirtes P., Glymour C. and Scheines R. (2001). Causation, Prediction, and Search. 
 The MIT Press, Cambridge, MA, USA, 3nd edition.

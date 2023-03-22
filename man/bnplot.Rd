@@ -9,7 +9,7 @@ Plot of a Bayesian network
 }
 
 \usage{
-bnplot(dag, shape = "ellipse", main = NULL, sub = NULL)
+bnplot(dag, shape = "ellipse", main = NULL, sub = NULL, highlight = NULL)
 }
 
 \arguments{
@@ -24,6 +24,10 @@ The main title of the graph displayed on the top.
 }
 \item{sub}{
 The subtitle of the graph displayed at the bottom.
+}
+\item{highlight}{
+A list with options specifying which nodes to plot with different colours. You can also check the package bnlearn or
+the package Rgraphviz for more information on this, or simply check the example below.
 }
 }
 
@@ -55,10 +59,16 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 
 \examples{
 \donttest{
+if (require("Rgraphviz") ) {
 # simulate a dataset with continuous data
-x <- matrix( rnorm(200 * 10, 1, 10), nrow = 200 )
+x <- matrix( rnorm(100 * 15, 1, 5), nrow = 100 )
+colnames(x) <- paste("X", 1:15, sep = "")
+nam <- colnames(x)
 a <- pchc(x)
 bnplot(a$dag)
+bnplot( a$dag, highlight = list(nodes = nam[c(2, 3)],
+col = "tomato", fill = "orange") )
+}
 }
 }
 

@@ -74,7 +74,8 @@ A list including:
 A list including the output of the \code{ \link{pchc.skel} } function.
 }
 \item{dag}{
-A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase. See the package "bnlearn" for more details.
+A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase. 
+See the package "bnlearn" for more details.
 }
 \item{scoring}{
 The score value.
