@@ -60,8 +60,8 @@ have an edge between them.
 }
 }
 \references{
-Tsagris M. (2020). The FEDHC Bayesian network learning algorithm.
-https://arxiv.org/pdf/2012.00113.pdf.
+Tsagris M. (2022). The FEDHC Bayesian Network Learning Algorithm.
+Mathematics, 10(25): 2604.
 
 Szekely G.J., Rizzo M.L. and Bakirov N.K. (2007). Measuring and Testing Independence
 by Correlation of Distances. Annals of Statistics, 35(6):2769-2794.

@@ -1,5 +1,5 @@
-b77f4d7425bf40a615d8364b5f32909a *DESCRIPTION
-5aa875088282b8d8756f7512a3abfaf2 *NAMESPACE
+e9f817fed6d2c21cbbb196c5544a7699 *DESCRIPTION
+bd532886d26352f67233777e9ccc7a7f *NAMESPACE
 8a477918a2a1642910708e3ba3433d33 *R/auc.R
 3b65e5b0e428481e3bb0b0913c3c6548 *R/big_cor.R
 b5ae3d5e5d78c6558513da8a7b2efc08 *R/big_read.R
@@ -51,8 +51,8 @@ e60075d751072c9e6b26899db008245a *R/rbn3.R
 dd1b2a56e16a6a83d36cfd83bbea8c62 *R/rmcd.R
 a623c2d11386bb4ac3112eea62a10284 *R/topological_sort.R
 8e05c319a9a999b48de7d11b15647a33 *man/auc.Rd
-ab455530832157a94fe6b282cd116659 *man/big_cor.Rd
-f73457108e8b5dfde2e2f09af0c3e34a *man/big_read.Rd
+4635370440e274d5334f5413c68beb93 *man/big_cor.Rd
+8dfd4e3956c48dae198d7b34bfe35e37 *man/big_read.Rd
 ba284cba5941fea72ced67c2d6d29801 *man/bn.skel.utils.Rd
 4b11b7cafa4be2cd95613407d45ab2a4 *man/bnmat.Rd
 b0456c2ae261b2bc27478a5f7efb4141 *man/bnplot.Rd
@@ -63,10 +63,10 @@ dfb71ff9f0d970bfed44307afc1f9424 *man/cor2pcor.Rd
 2820b3646ad10595773d35028c4761ce *man/corpairs.Rd
 41fb2625d6179c7e3a9092ee9ce5353f *man/correls.Rd
 8c8f85b458a1833a6a2b3107ce1ad54a *man/cortest.Rd
-40aae272e96aee1a76631be983cd9e72 *man/dcor.fedhc.skel.Rd
-ea52f067f68c370904fa6ca0258fdce5 *man/fedhc.Rd
-acf3d08694f7c2492429cdb6af6a5d9e *man/fedhc.boot.Rd
-37d7073eab51119322122e08ec029865 *man/fedhc.skel.Rd
+26c2c643643395ce7fad6de699427480 *man/dcor.fedhc.skel.Rd
+e1622f1e7414cbf721fa7ccde614ef67 *man/fedhc.Rd
+e59c1ebe696ff83f129b755146fb8949 *man/fedhc.boot.Rd
+9feb4dd6c27c7013e068338c50e2d35a *man/fedhc.skel.Rd
 393873c2caefeeea24fcde4e38887f62 *man/g2test.Rd
 92275f589e44ef190ffbad69e3ef617f *man/g2test_univariate.Rd
 819e1d2f4ea1b7934157fd87f16f79ce *man/is.dag.Rd
@@ -76,7 +76,7 @@ bf016eaa0d95c6e395ffba6b566889a4 *man/mmhc.Rd
 2cb4bad3995da4e52f501d23e8fcd4b8 *man/mmhc.skel.Rd
 9c3b476d02761632d37580c834d2800e *man/mmpc.Rd
 2ecfc68a033f96f6d0d10a907fd7ef7a *man/pc.sel.Rd
-47b2598acd560a5c1a4d244db6b1dca8 *man/pchc-package.Rd
+b5c334a6613b2ebcd9302adac8979d52 *man/pchc-package.Rd
 7eb5c4e29b1fc91973f5eb0c161ea5a4 *man/pchc.Rd
 0399f910a69af2b6dbf3cf10392f3ce5 *man/pchc.boot.Rd
 5db36a17da18ca5f95f0bc718112dd5a *man/pchc.skel.Rd

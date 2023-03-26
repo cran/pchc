@@ -72,7 +72,7 @@ have an edge between them.
 }
 }
 \references{
-Tsagris M. (2020). The FEDHC Bayesian network learning algorithm. https://arxiv.org/pdf/2012.00113.pdf.
+Tsagris M. (2022). The FEDHC Bayesian Network Learning Algorithm. Mathematics, 10(25): 2604.
 
 Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping.
 Journal of Machine Learning Research, 20(8): 1-39.

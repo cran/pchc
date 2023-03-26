@@ -39,12 +39,10 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 
 \examples{
 \donttest{
-if (require("bigreadr") ) {
-dataset <- matrix( runif(100 * 50, 1, 100), ncol = 50 )
-write.csv(dataset, "dataset.csv", row.names = FALSE)
-x <- pchc::big_read("dataset.csv", select = 1:50, header = TRUE)
+require(bigstatsr, quietly = TRUE)
+x <- matrix( runif(100 * 50, 1, 100), ncol = 50 )
+x <- bigstatsr::as_FBM(x)
 a <- pchc::big_cor(x)
-}
 }
 }
 

@@ -14,7 +14,7 @@ importFrom("graphics", abline, plot, points)
 
 importFrom("robustbase", covMcd)
 
-importFrom("bigstatsr", big_cor, big_copy, big_read)
+importFrom("bigstatsr", big_cor, big_copy, big_read, as_FBM)
 
 importFrom("dcov", mdcor, pdcor)
 

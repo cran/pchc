@@ -53,6 +53,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 \code{ \link{big_cor}, \link{fedhc.skel}, \link{mmhc.skel} }
 }
 
-%\examples{
-%}
+\examples{
+x <- matrix( runif(100 * 5, 1, 100), ncol = 5 )
+}
 
