@@ -11,10 +11,10 @@ Bootstrapping the FEDHC and FEDTABU Bayesian network learning algorithms.
 
 \usage{
 fedhc.boot(x, method = "pearson", alpha = 0.05, ini.stat = NULL, R = NULL,
-restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200)
+restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200, ncores = 1)
 
 fedtabu.boot(x, method = "pearson", alpha = 0.05, ini.stat = NULL, R = NULL,
-tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200)
+tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200, ncores = 1)
 }
 
 \arguments{
@@ -57,12 +57,13 @@ included in the graph.
 \item{B}{
 The number of bootstrap resamples to draw. The algorithm is performed in each bootstrap sample. In the end, the adjacency matrix on the observed data is returned, along with another adjacency matrix produced by the bootstrap. The latter one contains values from 0 to 1 indicating the proportion of times an edge between two nodes was present.
 }
+\item{ncores}{
+The number of cores to use, in case of parallel computing.
+}
 }
 
 \details{
-The FEDHC algorithm is implemented. The FBED algortihm (Borboudakis and Tsamardinos, 2019), without the
-backward phase, is implemented during the skeleton identification phase. Next, the Hill Climbing greedy
-search or the Tabu search is employed to score the network.
+The FEDHC algorithm is implemented. The FBED algortihm (Borboudakis and Tsamardinos, 2019), without the backward phase, is implemented during the skeleton identification phase. Next, the Hill Climbing greedy search or the Tabu search is employed to score the network.
 }
 
 \value{
@@ -81,11 +82,10 @@ The duration of the algorithm.
 \references{
 Tsagris M. (2022). The FEDHC Bayesian Network Learning Algorithm. Mathematics 2022, 10(15): 2604.
 
-Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping. 
+Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping.
 Journal of Machine Learning Research, 20(8): 1-39.
 
-Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
-structure learning algorithm. Machine Learning, 65(1):31-78.
+Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network structure learning algorithm. Machine Learning, 65(1):31-78.
 }
 
 \author{
@@ -98,7 +98,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{ \link{pchc}, \link{mmhc}, \link{fedhc.skel} }
+\code{ \link{pchc}, \link{mmhc}, \link{fedhc}, \link{fedhc.skel} }
 }
 
 \examples{

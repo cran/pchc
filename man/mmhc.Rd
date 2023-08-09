@@ -87,10 +87,10 @@ The duration of the algorithm.
 }
 
 \references{
-Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network 
+Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
 structure learning algorithm. Machine Learning, 65(1): 31-78.
 
-Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. 
+Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
 Computational Economics, 57(1):341-367.
 }
 
@@ -104,7 +104,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{ \link{fedhc}, \link{pchc}, \link{mmhc.skel} }
+\code{ \link{fedhc}, \link{pchc}, \link{mmhc.skel}, \link{mmhc.boot} }
 }
 
 \examples{

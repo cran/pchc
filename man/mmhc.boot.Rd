@@ -11,10 +11,12 @@ Bootstrapping the MMHC and MMTABU Bayesian network learning algorithms.
 
 \usage{
 mmhc.boot(x, method = "pearson", max_k = 3, alpha = 0.05, ini.stat = NULL,
-R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200)
+R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL,
+B = 200, ncores = 1)
 
 mmtabu.boot(x, method = "pearson", max_k = 3, alpha = 0.05, ini.stat = NULL,
-R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200)
+R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL,
+B = 200, ncores = 1)
 }
 
 \arguments{
@@ -63,6 +65,9 @@ included in the graph.
 \item{B}{
 The number of bootstrap resamples to draw. The algorithm is performed in each bootstrap sample. In the end, the adjacency matrix on the observed data is returned, along with another adjacency matrix produced by the bootstrap. The latter one contains values from 0 to 1 indicating the proportion of times an edge between two nodes was present.
 }
+\item{ncores}{
+The number of cores to use, in case of parallel computing.
+}
 }
 
 \details{
@@ -83,10 +88,10 @@ The duration of the algorithm.
 }
 
 \references{
-Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network 
+Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
 structure learning algorithm. Machine Learning, 65(1): 31-78.
 
-Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. 
+Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
 Computational Economics, 57(1):341-367.
 }
 
@@ -100,7 +105,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{ \link{fedhc}, \link{pchc}, \link{mmhc.skel} }
+\code{ \link{fedhc}, \link{pchc}, \link{mmhc.skel}, \link{mmhc} }
 }
 
 \examples{

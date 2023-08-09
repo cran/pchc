@@ -74,7 +74,7 @@ A list including:
 A list including the output of the \code{ \link{pchc.skel} } function.
 }
 \item{dag}{
-A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase. 
+A "bn" class output. A list including the outcome of the Hill-Climbing or the Tabu search phase.
 See the package "bnlearn" for more details.
 }
 \item{scoring}{
@@ -107,7 +107,7 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 %%  ~~further notes~~
 %}
 \seealso{
-\code{\link{fedhc}, \link{mmhc}, \link{pchc.skel} }
+\code{\link{fedhc}, \link{mmhc}, \link{pchc.skel}, \link{pchc.boot} }
 }
 
 \examples{
