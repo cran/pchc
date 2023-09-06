@@ -1,4 +1,4 @@
-fedhc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
+fedhc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, skel = NULL, ini.stat = NULL,
                   R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL) {
 
   runtime <- proc.time()
@@ -26,7 +26,9 @@ fedhc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat 
   }
   ## score for continuous : "bge" (default), "loglik-g", "aic-g", "bic-g", "bge"
   ## score for discrete : "bde", "loglik", "bic"
-  a <- pchc::fedhc.skel(x, method = method, alpha = alpha, ini.stat = ini.stat, R = R)
+  if ( is.null(skel) ) {
+    a <- pchc::fedhc.skel(x, method = method, alpha = alpha, ini.stat = ini.stat, R = R)
+  } else  a <- skel
   nama <- colnames(x)
   if ( is.null(nama) )  nama <-  paste("X", 1:dim(x)[2], sep = "")
   colnames(x) <- nama

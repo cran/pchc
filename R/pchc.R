@@ -1,4 +1,4 @@
-pchc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL, R = NULL,
+pchc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, skel = NULL, ini.stat = NULL, R = NULL,
                  restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL) {
 
   runtime <- proc.time()
@@ -24,7 +24,9 @@ pchc <- function(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat =
   }
   ## score for continuous : "bic-g" (default), "loglik-g", "aic-g", "bge"
   ## score for discrete : "bic", "loglik", "bde"
-  a <- Rfast::pc.skel(x, method = method, alpha = alpha, stat = ini.stat)
+  if ( is.null(skel) ) {
+    a <- Rfast::pc.skel(x, method = method, alpha = alpha, stat = ini.stat)
+  } else  a <- skel
   nama <- colnames(x)
   if ( is.null(nama) )  nama <-  paste("X", 1:dim(x)[2], sep = "")
   colnames(x) <- nama

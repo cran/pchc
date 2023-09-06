@@ -10,11 +10,13 @@ The FEDHC and FEDTABU Bayesian network learning algorithms.
 }
 
 \usage{
-fedhc(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
-R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+fedhc(x, method = "pearson", alpha = 0.05, robust = FALSE, skel = NULL,
+ini.stat = NULL, R = NULL, restart = 10, score = "bic-g", blacklist = NULL,
+whitelist = NULL)
 
-fedtabu(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
-R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+fedtabu(x, method = "pearson", alpha = 0.05, robust = FALSE, skel = NULL,
+ini.stat = NULL, R = NULL, tabu = 10, score = "bic-g", blacklist = NULL,
+whitelist = NULL)
 }
 
 \arguments{
@@ -30,6 +32,9 @@ The significance level for assessing the p-values.
 }
 \item{robust}{
 Do you want outliers to be removed prior to applying the FEDHC algorithm? If yes, set this to TRUE to utilise the MCD.
+}
+\item{skel}{
+If you have the output of the skeleton phase, the output from the function \code{\link{fedhc.skel}} plug it here. This can save time.
 }
 \item{ini.stat}{
 If the initial test statistics (univariate associations) are available, pass them through this parameter.

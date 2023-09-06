@@ -1,4 +1,4 @@
-mmtabu <- function(x, method = "pearson",  max_k = 3, alpha = 0.05, robust = FALSE, ini.stat = NULL,
+mmtabu <- function(x, method = "pearson",  max_k = 3, alpha = 0.05, robust = FALSE, skel = NULL, ini.stat = NULL,
                  R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL) {
 
   runtime <- proc.time()
@@ -25,7 +25,9 @@ mmtabu <- function(x, method = "pearson",  max_k = 3, alpha = 0.05, robust = FAL
   }
   ## score for continuous : "bic-g" (default), "loglik-g", "aic-g", "bge"
   ## score for discrete : "bic", "loglik", "bde"
-  a <- pchc::mmhc.skel(x, method = method, max_k = max_k, alpha = alpha, ini.stat = ini.stat, R = R)
+  if ( is.null(skel) ) {
+    a <- pchc::mmhc.skel(x, method = method, max_k = max_k, alpha = alpha, ini.stat = ini.stat, R = R)
+  } else  a <- skel
   nama <- colnames(x)
   if ( is.null(nama) )  nama <-  paste("X", 1:dim(x)[2], sep = "")
   colnames(x) <- nama

@@ -52,6 +52,6 @@ R implementation and documentation: Michail Tsagris \email{mtsagris@uoc.gr}.
 \examples{
 # simulate a dataset with continuous data
 x <- matrix( rnorm(200 * 20, 1, 10), nrow = 200 )
-a <- pchc(x)
-sim <- rbn( 100, dagobj = a$dag, x = x )
+a <- pchc::pchc(x)
+sim <- pchc::rbn( 100, dagobj = a$dag, x = x )
 }

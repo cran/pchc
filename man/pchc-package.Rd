@@ -13,8 +13,8 @@ The original version of this package was to learn Bayesian networks with the PCH
 \tabular{ll}{
 Package: \tab pchc\cr
 Type: \tab Package\cr
-Version: \tab 1.1 \cr
-Date: \tab 2023-08-08\cr
+Version: \tab 1.2 \cr
+Date: \tab 2023-09-06\cr
 License: \tab GPL-2\cr
 }
 }

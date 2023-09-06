@@ -1,6 +1,6 @@
 #useDynLib(pchc, .registration = TRUE)
 
-importFrom("bnlearn", hc, score, rbn, graphviz.plot, amat)
+importFrom("bnlearn", hc, score, rbn, graphviz.plot, amat, bn.fit)
 
 importFrom("Rfast", pc.skel, gchi2Test, g2Test, g2Test_perm,
            chi2Test, data.frame.to_matrix, corpairs, colsums)

@@ -10,11 +10,13 @@ The PCHC and PCTABU Bayesian network learning algorithms.
 }
 
 \usage{
-pchc(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
-R = NULL, restart = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+pchc(x, method = "pearson", alpha = 0.05, robust = FALSE, skel = NULL,
+ini.stat = NULL, R = NULL, restart = 10, score = "bic-g", blacklist = NULL,
+whitelist = NULL)
 
-pctabu(x, method = "pearson", alpha = 0.05, robust = FALSE, ini.stat = NULL,
-R = NULL, tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL)
+pctabu(x, method = "pearson", alpha = 0.05, robust = FALSE, skel = NULL,
+ini.stat = NULL, R = NULL, tabu = 10, score = "bic-g", blacklist = NULL,
+whitelist = NULL)
 }
 
 \arguments{
@@ -33,6 +35,9 @@ The significance level for assessing the p-values.
 }
 \item{robust}{
 Do you want outliers to be removed prior to applying the PCHC algorithm? If yes, set this to TRUE to utilise the MCD.
+}
+\item{skel}{
+If you have the output of the skeleton phase, the output from the function \code{\link{pchc.skel}} plug it here. This can save time.
 }
 \item{ini.stat}{
 If the initial test statistics (univariate associations) are available, pass them through this parameter.
