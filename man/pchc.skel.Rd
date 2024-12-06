@@ -15,12 +15,12 @@ robust = FALSE, ini.stat = NULL, R = NULL)
 
 \arguments{
 \item{x}{
-A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them into a matrix
-using \code{\link{data.frame.to_matrix}}. Note, that for the categorical case data, the numbers must start from 0. No missing data are allowed.
+A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them into a matrix. 
+Note, that for the categorical case data, the numbers must start from 0. No missing data are allowed.
 }
 \item{method}{
 If you have continuous data, this "pearson". If you have categorical data though,
-this must be "cat". In this case, make sure the minimum value of each variable is zero. The function "g2Test" in the R package \bold{Rfast} and the relevant functions work that way.
+this must be "cat". In this case, make sure the minimum value of each variable is zero. The function "g2Test()" in the R package \bold{Rfast} and the relevant functions work that way.
 }
 \item{alpha}{
 The significance leve for assessing the p-values.
@@ -83,10 +83,10 @@ Spirtes P.,  Glymour C. and Scheines R. (2001). Causation, Prediction, and Searc
 The MIT Press, Cambridge, MA, USA, 3nd edition.
 
 Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics. 
-Computational Economics, 57(1):341-367.
+Computational Economics, 57(1): 341--367.
 
 Tsamardinos I. and Borboudakis G. (2010) Permutation Testing Improves Bayesian Network Learning. 
-In Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2010. 322-337.
+In Machine Learning and Knowledge Discovery in Databases. ECML PKDD 2010. 322--337.
 }
 
 \author{

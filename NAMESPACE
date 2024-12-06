@@ -24,5 +24,6 @@ import("foreach")
 
 exportPattern("^[[:alpha:]]+")
 exportPattern("^[^\\.]")
+export(.onAttach)
 
 

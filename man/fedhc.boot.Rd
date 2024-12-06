@@ -19,8 +19,8 @@ tabu = 10, score = "bic-g", blacklist = NULL, whitelist = NULL, B = 200, ncores 
 
 \arguments{
 \item{x}{
-A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them into a matrix
-using \code{\link{data.frame.to_matrix}}. Note, that for the categorical case data, the numbers must start from 0. No missing data are allowed.
+A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them into a matrix. 
+Note, that for the categorical case data, the numbers must start from 0. No missing data are allowed.
 }
 \item{method}{
 If you have continuous data, you can choose either "pearson" or "spearman". If you have categorical data though, this must be "cat". In this case, make sure the minimum value of each variable is zero. The \code{\link{g2test}} and the relevant functions work that way.
@@ -83,9 +83,9 @@ The duration of the algorithm.
 Tsagris M. (2022). The FEDHC Bayesian Network Learning Algorithm. Mathematics 2022, 10(15): 2604.
 
 Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping.
-Journal of Machine Learning Research, 20(8): 1-39.
+Journal of Machine Learning Research, 20(8): 1--39.
 
-Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network structure learning algorithm. Machine Learning, 65(1):31-78.
+Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network structure learning algorithm. Machine Learning, 65(1): 31--78.
 }
 
 \author{

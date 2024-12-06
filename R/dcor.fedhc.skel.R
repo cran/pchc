@@ -25,9 +25,9 @@ dcor.fedhc.skel <- function(x, alpha = 0.05, ini.stat = NULL, R = NULL) {
     ini.stat <- n * R + 1
   } else if ( !is.null(R)  &  is.null(ini.stat) ) {
     ini.stat <- n * R + 1
-  } else if ( is.null(R)  &  !is.null(ini.stat) ) {
-    R <- (ini.stat - 1 ) / n
-  }
+  } #else if ( is.null(R)  &  !is.null(ini.stat) ) {
+    #R <- (ini.stat - 1 ) / n
+  #}
 
   ini.pvalue <- pchisq( ini.stat, 1, lower.tail = FALSE, log.p = TRUE)
   diag(ini.pvalue) <- 0

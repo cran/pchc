@@ -21,8 +21,8 @@ blacklist = NULL, whitelist = NULL)
 
 \arguments{
 \item{x}{
-A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them into a matrix
-using \code{\link{data.frame.to_matrix}}. Note, that for the categorical case data, the numbers must start from 0.
+A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them into a matrix. 
+Note, that for the categorical case data, the numbers must start from 0.
 No missing data are allowed.
 }
 \item{method}{
@@ -93,10 +93,10 @@ The duration of the algorithm.
 
 \references{
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
-structure learning algorithm. Machine Learning, 65(1): 31-78.
+structure learning algorithm. Machine Learning, 65(1): 31--78.
 
 Tsagris M. (2021). A new scalable Bayesian network learning algorithm with applications to economics.
-Computational Economics, 57(1):341-367.
+Computational Economics, 57(1): 341--367.
 }
 
 \author{

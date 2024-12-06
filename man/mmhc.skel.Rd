@@ -15,13 +15,13 @@ robust = FALSE, ini.stat = NULL, R = NULL, parallel = FALSE)
 
 \arguments{
 \item{x}{
-A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them into a matrix
-using \code{\link{data.frame.to_matrix}}. Note, that for the categorical case data, the numbers must start from 0.
+A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them into a matrix. 
+Note, that for the categorical case data, the numbers must start from 0.
 No missing data are allowed.
 }
 \item{method}{
 If you have continuous data, this "pearson". If you have categorical data though,
-this must be "cat". In this case, make sure the minimum value of each variable is zero. The function "g2Test" in the R package \bold{Rfast} and the relevant functions work that way.
+this must be "cat". In this case, make sure the minimum value of each variable is zero. The function "g2Test()" in the R package \bold{Rfast} and the relevant functions work that way.
 }
 \item{max_k}{
 The maximum conditioning set to use in the conditional indepedence test (see Details). Integer, default value is 3.
@@ -41,7 +41,7 @@ If the correlation matrix is available, pass it here.
 }
 \item{parallel}{
 Set this to TRUE if you have millions of observations. In that instance it can reduce the
-computaitonal time by 1/3.
+computational time by 1/3.
 }
 }
 
@@ -71,12 +71,13 @@ The adjancency matrix. A value of 1 in G[i, j] appears in G[j, i] also, indicati
 }
 }
 \references{
-Tsamardinos, I., Aliferis, C. F. and Statnikov, A. (2003). Time and sample efficient discovery of Markov blankets and direct causal relations. In Proceedings of the ninth ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 673-678). ACM.
+Tsamardinos, I., Aliferis, C. F. and Statnikov, A. (2003). Time and sample efficient discovery of Markov blankets and direct causal relations. 
+In Proceedings of the ninth ACM SIGKDD international conference on Knowledge discovery and data mining (pp. 673--678). ACM.
 
-Brown, L. E., Tsamardinos, I. and Aliferis, C. F. (2004). A novel algorithm for scalable and accurate Bayesian network learning. Medinfo, 711-715.
+Brown, L. E., Tsamardinos, I. and Aliferis, C. F. (2004). A novel algorithm for scalable and accurate Bayesian network learning. Medinfo, 711--715.
 
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian network
-structure learning algorithm. Machine Learning 65(1):31-78.
+structure learning algorithm. Machine Learning, 65(1): 31--78.
 }
 
 \author{

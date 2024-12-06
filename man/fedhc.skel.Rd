@@ -10,13 +10,13 @@ The skeleton of a Bayesian network produced by the FEDHC algorithm.
 
 \usage{
 fedhc.skel(x, method = "pearson", alpha = 0.05, robust = FALSE,
-ini.stat = NULL, R = NULL, parallel = FALSE)
+ini.stat = NULL, R = NULL)
 }
 
 \arguments{
 \item{x}{
 A numerical matrix with the variables. If you have a data.frame (i.e. categorical data) turn them
-into a matrix using \code{\link{data.frame.to_matrix}}. Note, that for the categorical case data,
+into a matrix. Note, that for the categorical case data,
 the numbers must start from 0. No missing data are allowed.
 }
 \item{method}{
@@ -36,10 +36,6 @@ If the initial test statistics (univariate associations) are available, pass the
 }
 \item{R}{
 If the correlation matrix is available, pass it here.
-}
-\item{parallel}{
-Set this to TRUE if you have millions of observations. In that instance it can reduce the
-computaitonal time by 1/3.
 }
 }
 
@@ -75,10 +71,10 @@ have an edge between them.
 Tsagris M. (2022). The FEDHC Bayesian Network Learning Algorithm. Mathematics, 10(25): 2604.
 
 Borboudakis G. and Tsamardinos I. (2019). Forward-backward selection with early dropping.
-Journal of Machine Learning Research, 20(8): 1-39.
+Journal of Machine Learning Research, 20(8): 1--39.
 
 Tsamardinos I., Brown E.L. and Aliferis F.C. (2006). The max-min hill-climbing Bayesian
-network structure learning algorithm. Machine Learning 65(1):31-78.
+network structure learning algorithm. Machine Learning, 65(1): 31--78.
 }
 
 \author{
