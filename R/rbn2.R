@@ -13,12 +13,12 @@ rbn2 <- function(n, G = NULL, p, nei, low = 0.1, up = 1) {
   x[, 1] <- Rfast::Rnorm(n)
    for (i in 2:p) {
     if ( sum( G[, i] != 0 ) == 0 ) {
-      x[, i] <- Rfast::Rnorm(n)
+      x[, i] <- rangen::Rnorm(n)
     } else {
       id <- which(G[, i] == 1)
       wa <- x[, id, drop = FALSE]
-      ub <- runif( dim(wa)[2] )
-      b <- runif( dim(wa)[2], -up, -low) * (ub < 0.5) + runif( dim(wa)[2], low, up) * (ub > 0.5)
+      ub <- rangen::Runif( dim(wa)[2] )
+      b <- rangen::Runif( dim(wa)[2], min = -up, max = -low) * (ub < 0.5) + rangen::Runif( dim(wa)[2], min = low, max = up) * (ub > 0.5)
       x[, i] <- rnorm(n, wa %*% b, 1)
       x[, i] <- ( x[, i] - mean(x[, i]) ) / Rfast::Var(x[, i], std = TRUE)
     }

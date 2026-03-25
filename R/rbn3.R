@@ -7,7 +7,7 @@ rbn3 <- function(n, p, s, a = 0, m = NULL, G = NULL, seed = FALSE) {
     G <- matrix( 0, p, p )
     nu <- 0.5 * p * (p - 1)
     G[ lower.tri(G) ] <- rbinom(nu, 1, s)
-    G[ G == 1 ] <- runif( sum(G), 0.1, 1 )
+    G[ G == 1 ] <- rangen::Runif( sum(G), 0.1, 1 )
   } else {
     G <- G
     p <- ncol(G)

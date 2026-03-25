@@ -1,5 +1,5 @@
-f6cbc78f8d2d33dbe0a796709a779a3b *DESCRIPTION
-20552368e3512ba5b195c4f52e1e5aae *NAMESPACE
+a973ecdf129184c6886782c2f89553e0 *DESCRIPTION
+ed223265b6031e700d615643638c783b *NAMESPACE
 8a477918a2a1642910708e3ba3433d33 *R/auc.R
 3b65e5b0e428481e3bb0b0913c3c6548 *R/big_cor.R
 b5ae3d5e5d78c6558513da8a7b2efc08 *R/big_read.R
@@ -48,8 +48,8 @@ c60b19cad52dc66fbf07743eebb0d24f *R/pcor.R
 ccf3131bf5125083ef2a268e6e1e9e23 *R/pctabu.boot.R
 fe16990c762dd7bbd5669ca5cf43ade8 *R/pi0est.R
 15a5778e91ece75e6b2cfdac3fccda2e *R/rbn.R
-da7d7d75f93fd518591c7954234cdffb *R/rbn2.R
-e60075d751072c9e6b26899db008245a *R/rbn3.R
+dc94481ce150de0455303dae8205f8eb *R/rbn2.R
+d04101a5446469af21e5b30f47bd0d5f *R/rbn3.R
 dd1b2a56e16a6a83d36cfd83bbea8c62 *R/rmcd.R
 a623c2d11386bb4ac3112eea62a10284 *R/topological_sort.R
 8e05c319a9a999b48de7d11b15647a33 *man/auc.Rd
@@ -78,7 +78,7 @@ cce445fab5df4076f680ee54ee53a5db *man/mmhc.Rd
 94992b90dc463375721ce036ac129b31 *man/mmhc.skel.Rd
 8b5182515b39c44160573c171c84637b *man/mmpc.Rd
 bd621c06dbd91d007fe17512ab28316b *man/pc.sel.Rd
-af8de9e8568a22e4c651210427dacda7 *man/pchc-package.Rd
+390cc5bcc86ef2cee283d4ec551625e9 *man/pchc-package.Rd
 02d14585e35edcdb6383cfcaa14d758f *man/pchc.Rd
 51592390b130670f8e1692a3b2c44644 *man/pchc.boot.Rd
 c0a33361681a3dab37e5c17775f05a97 *man/pchc.skel.Rd
